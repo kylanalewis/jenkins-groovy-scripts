@@ -2,8 +2,7 @@
 
 node {
     stage('Checkout') {
-    // scm Checkout
-    echo " Checkout not working."
+    checkout scm
     }
     
     stage('Test') {
