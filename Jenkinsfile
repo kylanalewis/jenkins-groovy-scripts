@@ -2,7 +2,6 @@
 
 node {
     stage('Checkout') {
-    echo "${BRANCH_NAME} ${env.BRANCH_NAME}"
     scm Checkout
     }
     
