@@ -10,8 +10,10 @@ node {
         def workspace = pwd()
         def externalMethod = load("executeCommand.groovy")
         echo workspace
-        externalMethod.proc()
-        
+    }
+
+    stage('Cleanup') {
+        deleteDir()
     }
 
 } 
