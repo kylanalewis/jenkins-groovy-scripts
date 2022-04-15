@@ -1,25 +1,19 @@
 #!/usr/bin/env groovy
 
-pipeline {
-  agent any
-  def workspace = pwd ()
-  def externalMethod = load("execute-command.groovy")
-  stages {
-    stage('Test') {
-      steps {
-        echo 'Hello world!'
-      }
-    }
+node {
     stage('Checkout') {
-      steps {
-        scm Checkout
-      }
+    echo "${BRANCH_NAME} ${env.BRANCH_NAME}"
+    scm Checkout
     }
-    stage('Run Scritps') {
-      steps {
+    
+    stage('Test') {
+        steps {
+        echo 'Hello world!'
+        def workspace = pwd ()
+        def externalMethod = load("execute-command.groovy")
         echo workspace
         externalMethod.proc()
-      }
+        }
     }
-  }
+
 } 
