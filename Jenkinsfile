@@ -2,6 +2,8 @@
 
 pipeline {
   agent any
+  def workspace = pwd ()
+  def externalMethod = load("execute-command.groovy")
   stages {
     stage('Test') {
       steps {
@@ -15,9 +17,7 @@ pipeline {
     }
     stage('Run Scritps') {
       steps {
-        def workspace = pwd ()
         echo workspace
-        def externalMethod = load("execute-command.groovy")
         externalMethod.proc()
       }
     }
