@@ -8,8 +8,12 @@ node {
     stage('Test') {
         echo 'Hello world!'
         def workspace = pwd()
-        def externalMethod = load("executeCommand.groovy")
         echo workspace
+    }
+
+    stage('Execute Job') {
+        def externalMethod = load("executeCommand.groovy")
+        externalMethod.method()
     }
 
     stage('Cleanup') {
