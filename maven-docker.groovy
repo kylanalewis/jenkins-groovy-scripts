@@ -1,28 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@kylanalewis
-jenkinsci /
-pipeline-examples
-Public
-
-Code
-Pull requests 14
-Actions
-Projects
-Security
-
-    Insights
-
-pipeline-examples/declarative-examples/jenkinsfile-examples/mavenDocker.groovy
-Patrick Wolf Adding changes based on review from Daniel Beck.
-Latest commit ed42666 on Aug 16, 2017
-History
-0 contributors
-105 lines (98 sloc) 3.03 KB
 pipeline {
 
   /*
@@ -128,19 +103,3 @@ pipeline {
     }
   }
 }
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
-Loading complete
